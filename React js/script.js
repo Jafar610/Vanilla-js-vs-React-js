@@ -1,8 +1,17 @@
-const fruits = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'];
-const fruitList = document.getElementById('root');
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-fruits.forEach(fruit => {
-    const li = document.createElement('li');
-    li.textContent = fruit;
-    fruitList.appendChild(li);
-});
+let fruit = ['banana', 'apple', 'grape'];
+let x = 0;
+
+setInterval(() => {
+    fruit[0] = x %2 ==0 ? React.createElement('li', {className: 'yellow'}, 'banana') : React.createElement('li', {className: 'orange'}, 'orange');
+
+    const test = React.createElement(
+        'ul', null,
+        fruit[0],
+        React.createElement('li', null, fruit[1]),
+        React.createElement('li', null, fruit[2])
+    )
+    x++;
+    root.render(test);
+}, 1000);
