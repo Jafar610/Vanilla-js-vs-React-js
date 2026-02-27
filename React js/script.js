@@ -4,7 +4,7 @@ let fruit = ['banana', 'apple', 'grape'];
 let x = 0;
 
 setInterval(() => {
-    fruit[0] = x %2 ==0 ? React.createElement('li', {className: 'yellow'}, 'banana') : React.createElement('li', {className: 'orange'}, 'orange');
+    fruit[0] = x %2 ==0 ? React.createElement('li', {className: 'banana'}, 'banana') : React.createElement('li', {className: 'orange'}, 'orange');
 
     const test = React.createElement(
         'ul', null,
