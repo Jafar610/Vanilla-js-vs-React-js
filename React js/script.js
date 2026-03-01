@@ -15,3 +15,6 @@ setInterval(() => {
     x++;
     root.render(test);
 }, 1000);
+
+
+
